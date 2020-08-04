@@ -1,4 +1,4 @@
-<p align='center'><img width='200' src="./images/proffy-git.png"/></p>
+<p align='center'><img width='300' src="./images/proffy-git.png"/></p>
 <h1 align='center'>Proffy</h1>
 <p align='center'>
 <img src="https://img.shields.io/github/repo-size/rafaasimi/proffy-nextlevelweek">
