@@ -14,6 +14,7 @@
 Esse projeto está utilizando as seguintes tecnologias:
 - HTML
 - CSS
+- JavaScript
 
 <h3>🖼 Layout</h3>
 <img src="/images/proffy-layout.PNG">
