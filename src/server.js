@@ -6,8 +6,8 @@ const proffys = [
         bio: 'Estusiasta das melhores tecnologias de química avançada. <br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.',
         subject: 'Química',
         cost: '20',
-        weekday: [0], 
-        time_from: [720], 
+        weekday: [0],
+        time_from: [720],
         time_to: [1220],
     },
     {
@@ -17,23 +17,70 @@ const proffys = [
         bio: 'Estusiasta das melhores tecnologias de química avançada. <br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.',
         subject: 'Química',
         cost: '20',
-        weekday: [1], 
-        time_from: [720], 
+        weekday: [1],
+        time_from: [720],
         time_to: [1220],
     }
 ]
 
+const subjects = [
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "Educação Física",
+    "Física",
+    "Geografia",
+    "História",
+    "Informática",
+    "Matemática",
+    "Português",
+    "Química",
+]
+
+const weekdays = [
+    "Domingo",
+    "Segunda-Feira",
+    "Terça-Feira",
+    "Quarta-Feira",
+    "Quinta-Feira",
+    "Sexta-Feira",
+    "Sábado",
+]
+
+
+// Funcionalidades
+function getSubject(subjectNumber) {
+    const arrayPosition = +subjectNumber - 1
+    return subjects[arrayPosition]
+}
+
 // Funções criando as rotas das paginas
 function pageLanding(req, res) {
-    return res.sendFile(__dirname + '/views/index.html')
+    return res.render('index.html')
 }
 
 function pageStudy(req, res) {
-    return res.sendFile(__dirname + '/views/study.html')
+    const filters = req.query
+    return res.render('study.html', { proffys, filters, subjects, weekdays })
 }
 
 function pageGiveClasses(req, res) {
-    return res.sendFile(__dirname + '/views/give-classes.html')
+    const data = req.query
+
+    // Transformando as chaves em um Array [name, avatar, bio]
+    const isNotEmpty = Object.keys(data).length > 0
+
+    // Adicionar dados a lista de proffys (Se houver Dados)
+    if (isNotEmpty) {
+
+        data.subject = getSubject(data.subject)
+        proffys.push(data)
+        
+        return res.redirect('/study')
+    }
+    
+    // Se não houver, mostrar a pagina
+    return res.render('give-classes.html', { subjects, weekdays })
 }
 
 // Chamo o ExpressJS que acabou de ser instalado ($ npm install express)
@@ -57,6 +104,7 @@ server.use(express.static('public'))
     .get('/', pageLanding)
     .get('/study', pageStudy)
     .get('/give-classes', pageGiveClasses)
+    // Escutando a porta localhost:5500
     .listen(5500)
 
 // Em package.json, altero o script para ficar com o nodemon monitorando as mudanças ($ npm install nodemon -D)
