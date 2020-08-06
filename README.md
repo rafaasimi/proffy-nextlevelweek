@@ -1,4 +1,4 @@
-<p align='center'><img width='300' src="./images/proffy-git.png"/></p>
+<p align='center'><img width='300' src="/public/images/proffy-git.png"/></p>
 <h1 align='center'>Proffy</h1>
 <p align='center'>
 <img src="https://img.shields.io/github/repo-size/rafaasimi/proffy-nextlevelweek">
@@ -15,9 +15,12 @@ Esse projeto está utilizando as seguintes tecnologias:
 - HTML
 - CSS
 - JavaScript
+- [ExpressJS](https://expressjs.com/pt-br/)
+- [Nodemon](https://nodemon.io/)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 <h3>🖼 Layout</h3>
-<img src="/images/proffy-layout.PNG">
+<img src="/public/images/proffy-layout.PNG">
 
 ## 📝 Licença
 <p>O projeto se encontra sob licença MIT. Para mais detalhes, acesse <a href='LICENSE'>license<a>.</p>
