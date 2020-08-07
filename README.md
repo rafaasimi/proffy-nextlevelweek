@@ -18,6 +18,7 @@ Esse projeto está utilizando as seguintes tecnologias:
 - [ExpressJS](https://expressjs.com/pt-br/)
 - [Nodemon](https://nodemon.io/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [SQLite](https://www.sqlite.org/)
 
 <h3>🖼 Layout</h3>
 <img src="/public/images/proffy-layout.PNG">
