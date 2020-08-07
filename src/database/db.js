@@ -1,4 +1,3 @@
-const Datbase = require('sqlite-async')
 const Database = require('sqlite-async')
 
 
