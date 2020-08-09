@@ -25,10 +25,13 @@ Esse projeto está utilizando as seguintes tecnologias:
 ```bash
 # Clone esse repositório
 $ git clone https://github.com/rafaasimi/proffy-nextlevelweek.git
+
 # Navegue até o repositório
 $ cd proffy
+
 # Instale as dependências
 $ npm install
+
 # Execute a aplicação
 $ npm start
 ```
