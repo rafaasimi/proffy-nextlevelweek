@@ -20,6 +20,13 @@ Esse projeto está utilizando as seguintes tecnologias:
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
 - [SQLite](https://www.sqlite.org/)
 
+
+## 🎲 Como utilizar
+        # git clone https://github.com/rafaasimi/proffy-nextlevelweek.git
+		# $ cd proffy
+		# $ npm install
+		# $ npm start
+
 <h3>🖼 Layout</h3>
 <img src="/public/images/proffy-layout.PNG">
 
