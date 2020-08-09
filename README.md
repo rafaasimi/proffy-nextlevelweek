@@ -22,10 +22,16 @@ Esse projeto está utilizando as seguintes tecnologias:
 
 
 ## 🎲 Como utilizar
-        # git clone https://github.com/rafaasimi/proffy-nextlevelweek.git
-		# $ cd proffy
-		# $ npm install
-		# $ npm start
+```bash
+# Clone esse repositório
+$ git clone https://github.com/rafaasimi/proffy-nextlevelweek.git
+# Navegue até o repositório
+$ cd proffy
+# Instale as dependências
+$ npm install
+# Execute a aplicação
+$ npm start
+```
 
 <h3>🖼 Layout</h3>
 <img src="/public/images/proffy-layout.PNG">
